@@ -1,0 +1,17 @@
+com\campus\exception\mapper\RoomNotEmptyExceptionMapper.class
+com\campus\exception\mapper\GlobalExceptionMapper.class
+com\campus\resource\SensorReadingResource.class
+com\campus\model\SensorReading.class
+com\campus\exception\mapper\SensorUnavailableExceptionMapper.class
+com\campus\exception\mapper\LinkedResourceNotFoundExceptionMapper.class
+com\campus\resource\SensorResource.class
+com\campus\SmartCampusApplication.class
+com\campus\exception\LinkedResourceNotFoundException.class
+com\campus\exception\SensorUnavailableException.class
+com\campus\EmbeddedServer.class
+com\campus\exception\RoomNotEmptyException.class
+com\campus\resource\DiscoveryResource.class
+com\campus\model\Sensor.class
+com\campus\filter\LoggingFilter.class
+com\campus\model\Room.class
+com\campus\resource\RoomResource.class
