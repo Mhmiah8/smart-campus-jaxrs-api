@@ -98,6 +98,12 @@ public class SensorResource {
         
         // Generate sensor ID if not provided
         if (sensor.getSensorId() == null || sensor.getSensorId().isEmpty()) {
+            if (sensor.getType() == null || sensor.getType().isBlank()) {
+                return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                        .type(MediaType.APPLICATION_JSON)
+                        .entity("{\"status\":500,\"error\":\"Internal Server Error\",\"message\":\"Sensor type is required when sensorId is missing\"}")
+                        .build();
+            }
             String type = sensor.getType() != null ? sensor.getType().substring(0, 1) : "S";
             sensor.setSensorId(type + String.format("%03d", sensorCounter.getAndIncrement()));
         }

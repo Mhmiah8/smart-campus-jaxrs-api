@@ -1,6 +1,7 @@
 package com.campus.exception.mapper;
 
 import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,8 +30,8 @@ public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
         errorNode.put("message", exception.getMessage() != null ? exception.getMessage() : "An unexpected error occurred");
         
         return Response.status(status)
-                .entity(errorNode)
-                .header("Content-Type", "application/json")
+            .type(MediaType.APPLICATION_JSON)
+            .entity(errorNode.toString())
                 .build();
     }
 }
