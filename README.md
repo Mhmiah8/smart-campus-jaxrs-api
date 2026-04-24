@@ -311,19 +311,19 @@ INFO: <<< RESPONSE: [GET] /api/v1/rooms - Status: 200 (SUCCESS) - Duration: 5ms
 
 ## Video Demo Checklist
 
-1. ✅ GET / - Show API documentation
-2. ✅ POST /rooms - Create room (201)
-3. ✅ GET /rooms - List rooms
-4. ✅ GET /rooms?building=Engineering - Filter by building
-5. ✅ POST /sensors (valid room) - Create sensor (201)
-6. ✅ POST /sensors (invalid room) - Create sensor (422 error)
-7. ✅ GET /sensors - List all
-8. ✅ GET /sensors?type=TEMPERATURE - Filter by type
-9. ✅ POST /sensors/{id}/readings - Add reading to ACTIVE sensor (201)
-10. ✅ POST /sensors/{id}/readings (T002 is MAINTENANCE) - Get 403 error
-11. ✅ DELETE /sensors/{id} - Delete sensor with readings (cascade)
-12. ✅ DELETE /rooms/{id} (has sensors) - Show 409 error
-13. ✅ Console logs - Show request/response logging
+1. GET / - Show API documentation
+2. POST /rooms - Create room (201)
+3. GET /rooms - List rooms
+4. GET /rooms?building=Engineering - Filter by building
+5. POST /sensors (valid room) - Create sensor (201)
+6. POST /sensors (invalid room) - Create sensor (422 error)
+7. GET /sensors - List all
+8. GET /sensors?type=TEMPERATURE - Filter by type
+9. POST /sensors/{id}/readings - Add reading to ACTIVE sensor (201)
+10. POST /sensors/{id}/readings (T002 is MAINTENANCE) - Get 403 error
+11. DELETE /sensors/{id} - Delete sensor with readings (cascade)
+12. DELETE /rooms/{id} (has sensors) - Show 409 error
+13. Console logs - Show request/response logging
 
 ## File Description
 
@@ -356,8 +356,3 @@ INFO: <<< RESPONSE: [GET] /api/v1/rooms - Status: 200 (SUCCESS) - Duration: 5ms
 
 ---
 
-**Status**: ✅ Complete  
-**Last Updated**: April 24, 2026  
-**Java Version**: 11+  
-**Maven**: 3.6+  
-**Servlet Container**: Tomcat 10+ or equivalent
