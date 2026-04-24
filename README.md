@@ -2,16 +2,6 @@
 
 A comprehensive REST API for managing smart campus rooms and sensors, built with JAX-RS (Jersey) using only in-memory storage (ConcurrentHashMap).
 
-## Project Overview
-
-This is a university coursework project demonstrating professional REST API design with JAX-RS, including:
-- Complete CRUD operations for rooms and sensors
-- Request/response logging filter
-- Custom exception handling with proper HTTP status codes
-- Sub-resource endpoints for sensor readings
-- In-memory data storage with thread-safe ConcurrentHashMap
-- RESTful design principles and best practices
-
 ## Correct Maven Project Structure
 
 ```
@@ -49,11 +39,6 @@ smart-campus-api/
                 └── web.xml                          (Servlet deployment descriptor)
 ```
 
-**Key Points:**
-- ✅ `src/main/java` - Java source code
-- ✅ `src/main/webapp` - Web content (static resources, JSP)
-- ✅ `src/main/webapp/WEB-INF/web.xml` - Servlet configuration
-- ✅ NOT `src/webapp` (that would be WRONG)
 
 ## Technologies Used
 
@@ -369,40 +354,10 @@ INFO: <<< RESPONSE: [GET] /api/v1/rooms - Status: 200 (SUCCESS) - Duration: 5ms
 - `jakarta.servlet:jakarta.servlet-api` - Servlet API
 - `com.fasterxml.jackson.core:jackson-databind` - JSON processing
 
-## Structure Verification
-
-✅ **Correct Structure:**
-```
-src/main/
-  ├── java/com/campus/...          (Java source files)
-  └── webapp/                       (Web content)
-      └── WEB-INF/
-          └── web.xml              (Deployment descriptor)
-```
-
-✅ **Why this is correct:**
-- Maven expects `src/main/java` for Java sources
-- Maven expects `src/main/webapp` for web content
-- `WEB-INF` MUST be inside `webapp`, not separate
-- This is the standard Maven WAR project structure
-
-❌ **WRONG structures:**
-- ~~`src/webapp/WEB-INF`~~ - webapp should be inside src/main
-- ~~`src/WEB-INF`~~ - WEB-INF must be in webapp
-- ~~All java files in one package~~ - Poor organization
-
-## Ready for Deployment
-
-The project is complete and ready to:
-1. Build with Maven
-2. Deploy to Tomcat or any Servlet container
-3. Pass all coursework requirements
-4. Demonstrate in video demo
-
 ---
 
 **Status**: ✅ Complete  
-**Last Updated**: April 1, 2026  
+**Last Updated**: April 24, 2026  
 **Java Version**: 11+  
 **Maven**: 3.6+  
 **Servlet Container**: Tomcat 10+ or equivalent
